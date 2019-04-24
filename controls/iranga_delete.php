@@ -1,12 +1,12 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojaiObje = new vairuotojai();
+include 'libraries/iranga.php';
+$irangosObj = new iranga();
 
 if(!empty($id)) {
 
     $removeErrorParameter = '';
-    if(!$vairuotojaiObje->deleteVairuotoja($id)) {
+    if(!$irangosObj->deleteIranga($id)) {
         $removeErrorParameter = '&remove_error=1';
     }
 

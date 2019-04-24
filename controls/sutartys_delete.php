@@ -1,12 +1,12 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojaiObje = new vairuotojai();
+include 'libraries/sutartys.php';
+$sutartiesObj = new sutartys();
 
 if(!empty($id)) {
 
     $removeErrorParameter = '';
-    if(!$vairuotojaiObje->deleteVairuotoja($id)) {
+    if(!$sutartiesObj->deleteSutarty($id)) {
         $removeErrorParameter = '&remove_error=1';
     }
 

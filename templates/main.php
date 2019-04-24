@@ -19,12 +19,10 @@
 				<div id="topMenu">
 					<ul class="float-left">
 						<li><a href="index.php?module=vairuotojai&action=list" title="Vairuotojai"<?php if($module == 'vairuotojai') { echo 'class="active"'; } ?>>Vairuotojai</a></li>
-						<li><a href="index.php?module=service&action=list" title="Paslaugos"<?php if($module == 'service') { echo 'class="active"'; } ?>>Paslaugos</a></li>
-						<li><a href="index.php?module=customer&action=list" title="Klientai"<?php if($module == 'customer') { echo 'class="active"'; } ?>>Klientai</a></li>
-						<li><a href="index.php?module=employee&action=list" title="Darbuotojai"<?php if($module == 'employee') { echo 'class="active"'; } ?>>Darbuotojai</a></li>
-						<li><a href="index.php?module=car&action=list" title="Automobiliai"<?php if($module == 'car') { echo 'class="active"'; } ?>>Automobiliai</a></li>
-						<li><a href="index.php?module=brand&action=list" title="Markės"<?php if($module == 'brand') { echo 'class="active"'; } ?>>Markės</a></li>
-						<li><a href="index.php?module=model&action=list" title="Modeliai"<?php if($module == 'model') { echo 'class="active"'; } ?>>Modeliai</a></li>
+						<li><a href="index.php?module=sunkvezimiai&action=list" title="Sunkvezimiai"<?php if($module == 'sunkvezimiai') { echo 'class="active"'; } ?>>Sunkvezimiai</a></li>
+						<li><a href="index.php?module=imones&action=list" title="Imones"<?php if($module == 'imones') { echo 'class="active"'; } ?>>Imones</a></li>
+						<li><a href="index.php?module=sutartys&action=list" title="Sutartys"<?php if($module == 'sutartys') { echo 'class="active"'; } ?>>Sutartys</a></li>
+						<li><a href="index.php?module=iranga&action=list" title="Iranga"<?php if($module == 'iranga') { echo 'class="active"'; } ?>>Irangos</a></li>
 					</ul>
 				</div>
 				<div id="contentMain">

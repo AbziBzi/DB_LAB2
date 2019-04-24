@@ -1,12 +1,12 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojaiObje = new vairuotojai();
+include 'libraries/imones.php';
+$imonesObj = new imones();
 
 if(!empty($id)) {
 
     $removeErrorParameter = '';
-    if(!$vairuotojaiObje->deleteVairuotoja($id)) {
+    if(!$imonesObj->deleteImone($id)) {
         $removeErrorParameter = '&remove_error=1';
     }
 

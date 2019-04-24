@@ -49,9 +49,9 @@ class vairuotojai {
     }
 
     public function deleteVairuotoja($id) {
-        $query = "  DELETE FROM `{$this->vairuotojai_lentele}`
-					WHERE `asmens_kodas`='{$id}'";
-        mysql::query($query);
+        $query = "    DELETE FROM `{$this->vairuotojai_lentele}` 
+                      WHERE asmens_kodas = '{$id}'";
+        return mysql::query($query);
     }
 
     public function updateVairuotoja($data) {
@@ -62,7 +62,7 @@ class vairuotojai {
                         `gimimo_data`={$data['gimimo_data']},
                         `sutarties_data`={$data['sutarties_data']},
                         `telefono_numeris`={$data['telefono_numeris']}
-                    WHERE `asmens_kodas`={$data['asmens_kodas']},";
+                    WHERE `asmens_kodas`={$data['asmens_kodas']}";
         mysql::query($query);
     }
 
@@ -89,16 +89,4 @@ class vairuotojai {
                                 )";
         mysql::query($query);
     }
-
-    public function getContractCountOfVairuotojas($id) {
-        $query = "  SELECT COUNT(`{$this->sutartys_lentele}`.`numeris`) AS `kiekis`
-					FROM `{$this->vairuotojai_lentele}`
-						INNER JOIN `{$this->sutartys_lentele}`
-							ON `{$this->vairuotojai_lentele}`.`asmens_kodas`=`{$this->sutartys_lentele}`.`fk_vairuotojo_asmens_kodas`
-					WHERE `{$this->vairuotojai_lentele}`.`asmens_kodas`='{$id}'";
-        $data = mysql::select($query);
-
-        return $data[0]['kiekis'];
-    }
-
 }

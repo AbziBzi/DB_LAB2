@@ -1,28 +1,26 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojoObj = new vairuotojai();
+include 'libraries/iranga.php';
+$irangosObj = new iranga();
 
 $formErrors = null;
 $data = array();
 
-$required = array('vardas', 'pavarde', 'asmens_kodas', 'gimimo_data', 'sutarties_data');
+$required = array('pavadinimas', 'salis', 'id_sunkvezimio_iranga', 'fk_sunkvezimio_numeriai');
 
 $maxLengths = array(
-    'asmens_kodas' => 11
+    'fk_sunkvezimio_numeriai' => 7
 );
 
 if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'amsnems_kodas' => 'positivenumber',
-        'vardas' => 'alfanum',
-        'pavarde' => 'alfanum',
-        'gimimo_data' => 'date',
-        'teisiu_pabaigos_data' => 'date',
-        'sutarties_data' => 'date',
-        'telefonas' => 'phone'
+        'pavadinimas' => 'alfanum',
+        'salis' => 'alfanum',
+        'kaina' => 'price',
+        'id_sunkvezimio_iranga' => 'positivenumber',
+        'fk_sunkvezimio_numeriai' => 'alfanum',
     );
 
     $validator = new validator($validations, $required, $maxLengths);
@@ -30,7 +28,7 @@ if(!empty($_POST['submit'])) {
     if ($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
-        $vairuotojoObj->updateVairuotoja($dataPrepared);
+        $irangosObj->updateIranga($dataPrepared);
 
         header("Location: index.php?module={$module}&action=list");
         die();
@@ -41,7 +39,7 @@ if(!empty($_POST['submit'])) {
     }
 }
 else {
-    $data = $vairuotojoObj->getVairuotoja($id);
+    $data = $irangosObj->getIranga($id);
 }
 
 $data['editing'] = 1;

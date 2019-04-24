@@ -1,12 +1,13 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojaiObje = new vairuotojai();
+include 'libraries/sunkvezimiai.php';
+
+$sunkvezimioObj = new sunkvezimiai();
 
 if(!empty($id)) {
 
     $removeErrorParameter = '';
-    if(!$vairuotojaiObje->deleteVairuotoja($id)) {
+    if(!$sunkvezimioObj->deleteSunkvezimi($id)) {
         $removeErrorParameter = '&remove_error=1';
     }
 
@@ -14,5 +15,4 @@ if(!empty($id)) {
     header("Location: index.php?module={$module}&action=list{$removeErrorParameter}");
     die();
 }
-
 ?>

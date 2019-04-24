@@ -1,35 +1,33 @@
 <?php
 
-include 'libraries/vairuotojai.php';
-$vairuotojoObj = new vairuotojai();
+include 'libraries/sutartys.php';
+$sutartiesObj = new sutartys();
 
 $formErrors = null;
 $data = array();
 
-$required = array('vardas', 'pavarde', 'asmens_kodas', 'gimimo_data', 'sutarties_data');
+$required = array('numeris', 'kaina', 'fk_imones_kodas', 'fk_vairuotojo_asmens_kodas');
 
 $maxLengths = array(
-    'asmens_kodas' => 11
+    'fk_vairuotojo_asmens_kodas' => 11,
+    'fk_imones_kodas' => 9
 );
 
 if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'amsnems_kodas' => 'positivenumber',
-        'vardas' => 'alfanum',
-        'pavarde' => 'alfanum',
-        'gimimo_data' => 'date',
-        'teisiu_pabaigos_data' => 'date',
-        'sutarties_data' => 'date',
-        'telefonas' => 'phone'
+        'numeris' => 'positivenumber',
+        'kaina' => 'price',
+        'fk_imones_kodas' => 'positivenumber',
+        'fk_vairuotojo_asmens_kodas' => 'positivenumber'
     );
 
     $validator = new validator($validations, $required, $maxLengths);
 
     if($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
-        $vairuotojoObj->insertVairuotoja($dataPrepared);
+        $sutartiesObj->insertSutarty($dataPrepared);
         header("Location: index.php?module={$module}&action=list");
         die();
     }
@@ -39,4 +37,4 @@ if(!empty($_POST['submit'])) {
     }
 }
 
-include 'templates/vairuotojai_form.php';
+include 'templates/sutartys_form.php';
