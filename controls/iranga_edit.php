@@ -42,6 +42,6 @@ else {
     $data = $irangosObj->getIranga($id);
 }
 
-$data['editing'] = 1;
+include 'templates/iranga_form.php';
 
 ?>

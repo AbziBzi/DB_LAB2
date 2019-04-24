@@ -6,32 +6,32 @@ $sunkvezimioObj = new sunkvezimiai();
 $formErrors = null;
 $data = array();
 
-$required = array('markes','modeliai','numeriai','pagaminimo_data');
+$required = array('marke', 'modelis', 'numeriai', 'pagaminimo_data');
 
-$maxLength = array(
+$maxLengths = array(
     'numeriai' => 7
 );
 
-if (!empty($_POST['submit'])) {
-    include 'utils/validator.class.php';
+if(!empty($_POST['submit'])) {
 
     $validations = array(
-        'markes' => 'alfanum',
-        'modleiai' => 'alfanum',
+        'marke' => 'alfanum',
+        'modelis' => 'alfanum',
         'numeriai' => 'alfanum',
         'pagaminimo_data' => 'date',
-        'registravimo_data' => 'date',
+        'registravimo_data' =>'date',
         'rida' => 'positivenumber'
     );
+    include 'utils/validator.class.php';
 
-    $validator = new validator($validations, $required, $maxLength);
+    $validator = new validator($validations, $required, $maxLengths);
 
-    if ($validator->validate($_POST)){
+    if($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
         $sunkvezimioObj->updateSunkvezimi($dataPrepared);
 
-        header("LOcation: index.php?module={$module}&action=list");
+        header("Location: index.php?module={$module}&action=list");
         die();
     }
     else {
@@ -43,4 +43,6 @@ else {
     $data = $sunkvezimioObj->getSunkvezimiai($id);
 }
 $data['editing'] = 1;
+
+include 'templates/sunkvezimiai_form.php';
 ?>

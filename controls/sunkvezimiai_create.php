@@ -6,16 +6,18 @@ $sunkvezimioObj = new sunkvezimiai();
 $formErrors = null;
 $data = array();
 
-$required = array('marke', 'modelis', 'numeriai', 'pagaminimo data');
+// nustatome privalomus laukus
+$required = array('marke', 'modelis', 'numeriai', 'pagaminimo_data');
 
-$maxLengths = array(
+// maksimalūs leidžiami laukų ilgiai
+$maxLengths = array (
     'numeriai' => 7
 );
 
-if (!empty($post['submit'])) {
-    include 'utils/validator.class.php';
-
-    $validatios = array(
+// paspaustas išsaugojimo mygtukas
+if(!empty($_POST['submit'])) {
+    // nustatome laukų validatorių tipus
+    $validations = array(
         'marke' => 'alfanum',
         'modelis' => 'alfanum',
         'numeriai' => 'alfanum',
@@ -24,18 +26,30 @@ if (!empty($post['submit'])) {
         'rida' => 'positivenumber'
     );
 
-    $validator = new validator($validatios, $required, $maxLengths);
+    // sukuriame validatoriaus objektą
+    include 'utils/validator.class.php';
+    $validator = new validator($validations, $required, $maxLengths);
 
-    if ($validator->validate($_POST)) {
+    if($validator->validate($_POST)) {
+        // suformuojame laukų reikšmių masyvą SQL užklausai
         $dataPrepared = $validator->preparePostFieldsForSQL();
-        $sunkvezimioObj->insertSunkvezimi($dataPrepared);
+
+        // įrašome naują įrašą
+        $sunkvezimioObj->insertSunvezimi($dataPrepared);
+
+        // nukreipiame į markių puslapį
         header("Location: index.php?module={$module}&action=list");
         die();
-    }
-    else{
+    } else {
+        // gauname klaidų pranešimą
         $formErrors = $validator->getErrorHTML();
+        // gauname įvestus laukus
         $data = $_POST;
     }
 }
 
+
+// įtraukiame šabloną
 include 'templates/sunkvezimiai_form.php';
+
+?>
