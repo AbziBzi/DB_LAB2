@@ -1020,487 +1020,476 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="243" name="fk_sutarties_numeris">
+    <column id="257" parent="243" name="fk_imones_kodas">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="243" name="fk_imones_kodas">
-      <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="259" parent="243" name="turi">
+    <index id="258" parent="243" name="turi">
       <ColNames>fk_vairuotojo_sasmens_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="260" parent="243" name="patvirtina">
-      <ColNames>fk_sutarties_numeris</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="261" parent="243" name="pateikiamas">
+    <index id="259" parent="243" name="pateikiamas">
       <ColNames>fk_imones_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="243" name="PRIMARY">
+    <key id="260" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_dokumentas</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="263" parent="243" name="turi">
+    <foreign-key id="261" parent="243" name="turi">
       <ColNames>fk_vairuotojo_sasmens_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>vairuotojai</RefTableName>
       <RefColNames>asmens_kodas</RefColNames>
     </foreign-key>
-    <foreign-key id="264" parent="243" name="patvirtina">
-      <ColNames>fk_sutarties_numeris</ColNames>
-      <RefSchemaName>transportas</RefSchemaName>
-      <RefTableName>sutartys</RefTableName>
-      <RefColNames>numeris</RefColNames>
-    </foreign-key>
-    <foreign-key id="265" parent="243" name="pateikiamas">
+    <foreign-key id="262" parent="243" name="pateikiamas">
       <ColNames>fk_imones_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>imones</RefTableName>
       <RefColNames>imones_kodas</RefColNames>
     </foreign-key>
-    <column id="266" parent="244" name="pavadinimas">
+    <column id="263" parent="244" name="pavadinimas">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="244" name="kontakto_vardas">
+    <column id="264" parent="244" name="kontakto_vardas">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="244" name="kontakto_pavarde">
+    <column id="265" parent="244" name="kontakto_pavarde">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="244" name="issimokejimas">
+    <column id="266" parent="244" name="issimokejimas">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="244" name="imones_kodas">
+    <column id="267" parent="244" name="imones_kodas">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="271" parent="244" name="PRIMARY">
+    <key id="268" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>imones_kodas</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="272" parent="245" name="pavadinimas">
+    <column id="269" parent="245" name="pavadinimas">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="245" name="tipas">
+    <column id="270" parent="245" name="tipas">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="245" name="kiekis">
+    <column id="271" parent="245" name="kiekis">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="245" name="id_krovinys">
+    <column id="272" parent="245" name="id_krovinys">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="245" name="fk_imones_kodas">
+    <column id="273" parent="245" name="fk_imones_kodas">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="245" name="fk_sunkvezimio_numeriai">
+    <column id="274" parent="245" name="fk_sunkvezimio_numeriai">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="278" parent="245" name="patenka">
+    <index id="275" parent="245" name="patenka">
       <ColNames>fk_imones_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="279" parent="245" name="transportuoja">
+    <index id="276" parent="245" name="transportuoja">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="280" parent="245" name="PRIMARY">
+    <key id="277" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_krovinys</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="281" parent="245" name="patenka">
+    <foreign-key id="278" parent="245" name="patenka">
       <ColNames>fk_imones_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>imones</RefTableName>
       <RefColNames>imones_kodas</RefColNames>
     </foreign-key>
-    <foreign-key id="282" parent="245" name="transportuoja">
+    <foreign-key id="279" parent="245" name="transportuoja">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>sunkvezimiai</RefTableName>
       <RefColNames>numeriai</RefColNames>
     </foreign-key>
-    <column id="283" parent="246" name="data">
+    <column id="280" parent="246" name="data">
       <Position>1</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="246" name="suma">
+    <column id="281" parent="246" name="suma">
       <Position>2</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="246" name="id_mokejimas">
+    <column id="282" parent="246" name="id_mokejimas">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="246" name="fk_imones_kodas">
+    <column id="283" parent="246" name="fk_imones_kodas">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="246" name="fk_saskaitos_numeris">
+    <column id="284" parent="246" name="fk_saskaitos_numeris">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="288" parent="246" name="sumoka">
+    <index id="285" parent="246" name="sumoka">
       <ColNames>fk_imones_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="289" parent="246" name="apmoka">
+    <index id="286" parent="246" name="apmoka">
       <ColNames>fk_saskaitos_numeris</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="290" parent="246" name="PRIMARY">
+    <key id="287" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_mokejimas</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="291" parent="246" name="sumoka">
+    <foreign-key id="288" parent="246" name="sumoka">
       <ColNames>fk_imones_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>imones</RefTableName>
       <RefColNames>imones_kodas</RefColNames>
     </foreign-key>
-    <foreign-key id="292" parent="246" name="apmoka">
+    <foreign-key id="289" parent="246" name="apmoka">
       <ColNames>fk_saskaitos_numeris</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>saskaitos</RefTableName>
       <RefColNames>numeris</RefColNames>
     </foreign-key>
-    <column id="293" parent="247" name="numeris">
+    <column id="290" parent="247" name="numeris">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="247" name="isstatymo_data">
+    <column id="291" parent="247" name="isstatymo_data">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="247" name="suma">
+    <column id="292" parent="247" name="suma">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="247" name="terminas">
+    <column id="293" parent="247" name="terminas">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="247" name="fk_sutarties_numeris">
+    <column id="294" parent="247" name="fk_sutarties_numeris">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="298" parent="247" name="išrašo">
+    <index id="295" parent="247" name="išrašo">
       <ColNames>fk_sutarties_numeris</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="299" parent="247" name="PRIMARY">
+    <key id="296" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>numeris</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="300" parent="247" name="išrašo">
+    <foreign-key id="297" parent="247" name="išrašo">
       <ColNames>fk_sutarties_numeris</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>sutartys</RefTableName>
       <RefColNames>numeris</RefColNames>
     </foreign-key>
-    <column id="301" parent="248" name="marke">
+    <column id="298" parent="248" name="marke">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="248" name="modelis">
+    <column id="299" parent="248" name="modelis">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="248" name="numeriai">
+    <column id="300" parent="248" name="numeriai">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="248" name="pagaminimo_data">
+    <column id="301" parent="248" name="pagaminimo_data">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="248" name="registravimo_data">
+    <column id="302" parent="248" name="registravimo_data">
       <Position>5</Position>
       <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="248" name="rida">
+    <column id="303" parent="248" name="rida">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="307" parent="248" name="PRIMARY">
+    <key id="304" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>numeriai</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="249" name="pavadinimas">
+    <column id="305" parent="249" name="pavadinimas">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="249" name="salis">
+    <column id="306" parent="249" name="salis">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="249" name="pinigu_kiekis">
+    <column id="307" parent="249" name="pinigu_kiekis">
       <Position>3</Position>
       <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="249" name="id_sunkvezimio_iranga">
+    <column id="308" parent="249" name="id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="249" name="fk_sunkvezimio_numeriai">
+    <column id="309" parent="249" name="fk_sunkvezimio_numeriai">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="313" parent="249" name="fk_sunkvezimio_numeriai">
+    <index id="310" parent="249" name="id_sunkvezimio_iranga">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="311" parent="249" name="id_sunkvezimio_iranga_2">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="312" parent="249" name="fk_sunkvezimio_numeriai">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="314" parent="249" name="PRIMARY">
+    <key id="313" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id_sunkvezimio_iranga</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="315" parent="249" name="sunkvezimio_iranga_ibfk_1">
+    <foreign-key id="314" parent="249" name="sunkvezimio_iranga_ibfk_1">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>sunkvezimiai</RefTableName>
       <RefColNames>numeriai</RefColNames>
     </foreign-key>
-    <column id="316" parent="250" name="nuo_data">
+    <column id="315" parent="250" name="nuo_data">
       <Position>1</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="250" name="iki_data">
+    <column id="316" parent="250" name="iki_data">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="250" name="id_sunkvezimio_vairuotojas">
+    <column id="317" parent="250" name="id_sunkvezimio_vairuotojas">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="250" name="fk_sunkvezimio_numeriai">
+    <column id="318" parent="250" name="fk_sunkvezimio_numeriai">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="250" name="fk_vairuotojo_asmens_kodas">
+    <column id="319" parent="250" name="fk_vairuotojo_asmens_kodas">
       <Position>5</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="321" parent="250" name="vairuoja">
+    <index id="320" parent="250" name="vairuoja">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="322" parent="250" name="yra">
+    <index id="321" parent="250" name="yra">
       <ColNames>fk_vairuotojo_asmens_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="323" parent="250" name="PRIMARY">
+    <key id="322" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_sunkvezimio_vairuotojas</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="324" parent="250" name="vairuoja">
+    <foreign-key id="323" parent="250" name="vairuoja">
       <ColNames>fk_sunkvezimio_numeriai</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>sunkvezimiai</RefTableName>
       <RefColNames>numeriai</RefColNames>
     </foreign-key>
-    <foreign-key id="325" parent="250" name="yra">
+    <foreign-key id="324" parent="250" name="yra">
       <ColNames>fk_vairuotojo_asmens_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>vairuotojai</RefTableName>
       <RefColNames>asmens_kodas</RefColNames>
     </foreign-key>
-    <column id="326" parent="251" name="numeris">
+    <column id="325" parent="251" name="numeris">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="251" name="kaina">
+    <column id="326" parent="251" name="kaina">
       <Position>2</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="251" name="referencinis_numeris">
+    <column id="327" parent="251" name="referencinis_numeris">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="251" name="fk_įmones_kodas">
+    <column id="328" parent="251" name="fk_imones_kodas">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="251" name="fk_vairuotojo_asmens_kodas">
+    <column id="329" parent="251" name="fk_vairuotojo_asmens_kodas">
       <Position>5</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="331" parent="251" name="sudaro">
-      <ColNames>fk_įmones_kodas</ColNames>
+    <index id="330" parent="251" name="sudaro">
+      <ColNames>fk_imones_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="332" parent="251" name="išsiunčia">
+    <index id="331" parent="251" name="išsiunčia">
       <ColNames>fk_vairuotojo_asmens_kodas</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="333" parent="251" name="PRIMARY">
+    <key id="332" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>numeris</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="334" parent="251" name="sudaro">
-      <ColNames>fk_įmones_kodas</ColNames>
+    <foreign-key id="333" parent="251" name="sudaro">
+      <ColNames>fk_imones_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>imones</RefTableName>
       <RefColNames>imones_kodas</RefColNames>
     </foreign-key>
-    <foreign-key id="335" parent="251" name="išsiunčia">
+    <foreign-key id="334" parent="251" name="išsiunčia">
       <ColNames>fk_vairuotojo_asmens_kodas</ColNames>
       <RefSchemaName>transportas</RefSchemaName>
       <RefTableName>vairuotojai</RefTableName>
       <RefColNames>asmens_kodas</RefColNames>
     </foreign-key>
-    <column id="336" parent="252" name="vardas">
+    <column id="335" parent="252" name="vardas">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="252" name="pavarde">
+    <column id="336" parent="252" name="pavarde">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="252" name="asmens_kodas">
+    <column id="337" parent="252" name="asmens_kodas">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="252" name="teisiu_pabaigos_data">
+    <column id="338" parent="252" name="teisiu_pabaigos_data">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="252" name="gimimo_data">
+    <column id="339" parent="252" name="gimimo_data">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="252" name="sutarties_data">
+    <column id="340" parent="252" name="sutarties_data">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="252" name="telefono_numeris">
+    <column id="341" parent="252" name="telefono_numeris">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="343" parent="252" name="PRIMARY">
+    <key id="342" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>asmens_kodas</ColNames>
       <Primary>1</Primary>
