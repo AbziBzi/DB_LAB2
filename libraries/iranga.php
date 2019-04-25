@@ -14,7 +14,7 @@ class iranga
     public function getIranga($id){
         $query = "  SELECT *
                     FROM `{$this->iranga_lentele}`
-                    WHERE `id_sunkvezimio_iranga`=`{$id}`";
+                    WHERE `id`='{$id}'";
         $data = mysql::select($query);
 
         return $data[0];
@@ -37,7 +37,7 @@ class iranga
     }
 
     public function getIrangosSarasoKieki() {
-        $query = " SELECT COUNT(`id_sunkvezimio_iranga`) as `kiekis`
+        $query = " SELECT COUNT(`id`) as `kiekis`
                     FROM `{$this->iranga_lentele}`";
         $data = mysql::select($query);
 
@@ -46,17 +46,17 @@ class iranga
 
     public function deleteIranga($id) {
         $query = "  DELETE FROM `{$this->iranga_lentele}`
-					WHERE `id_sunkvezimio_iranga`='{$id}'";
+					WHERE `id`='{$id}'";
         return mysql::query($query);
     }
 
     public function updateIranga($data) {
-        $query = " UPDATE `{$this->iranga_lentele}`
-                    SET `pavadinimas`={$data['pavadinimas']},
-                        `salis`={$data['salis']},
-                        `pinigu_kiekis`={$data['pinigu_kiekis']}
-                        `fk_sunkvezimio_numeriai`={$data['fk_sunkvezimio_numeriai']}
-                    WHERE `id_sunkvezimio_iranga`={$data['id_sunkvezimio_iranga']}";
+        $query = "  UPDATE  {$this->iranga_lentele}
+                    SET     `pavadinimas`='{$data['pavadinimas']}',
+                            `salis`='{$data['salis']}',
+                            `pinigu_kiekis`='{$data['pinigu_kiekis']}',
+                            `fk_sunkvezimio_numeriai`='{$data['fk_sunkvezimio_numeriai']}'
+                    WHERE   `id`='{$data['id']}'";
         mysql::query($query);
     }
 
@@ -66,7 +66,6 @@ class iranga
                                     `pavadinimas`,
                                     `salis`,
                                     `pinigu_kiekis`,
-                                    `id_sunkvezimio_iranga`,
                                     `fk_sunkvezimio_numeriai`
                                 )
                                 VALUES
@@ -74,8 +73,7 @@ class iranga
                                     '{$data['pavadinimas']}',
                                     '{$data['salis']}',
                                     '{$data['pinigu_kiekis']}',
-                                    '{$data['id_sunkvezimio_iranga']}',
-                                    {$data['fk_sunkvezimio_numeriai']}
+                                    '{$data['fk_sunkvezimio_numeriai']}'
                                 )";
         mysql::query($query);
     }

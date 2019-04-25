@@ -1,31 +1,32 @@
 <?php
 
 include 'libraries/iranga.php';
+include 'libraries/sunkvezimiai.php';
 $irangosObj = new iranga();
+$sunkvezimioObj = new sunkvezimiai();
 
 $formErrors = null;
 $data = array();
 
-$required = array('pavadinimas', 'salis', 'id_sunkvezimio_iranga', 'fk_sunkvezimio_numeriai');
+$required = array('pavadinimas', 'salis', 'fk_sunkvezimio_numeriai');
 
 $maxLengths = array(
     'fk_sunkvezimio_numeriai' => 7
 );
 
 if(!empty($_POST['submit'])) {
-    include 'utils/validator.class.php';
 
     $validations = array (
         'pavadinimas' => 'alfanum',
         'salis' => 'alfanum',
-        'kaina' => 'price',
-        'id_sunkvezimio_iranga' => 'positivenumber',
+        'pinigu_kiekis' => 'price',
         'fk_sunkvezimio_numeriai' => 'alfanum',
     );
 
+    include 'utils/validator.class.php';
     $validator = new validator($validations, $required, $maxLengths);
 
-    if ($validator->validate($_POST)) {
+    if($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
         $irangosObj->updateIranga($dataPrepared);

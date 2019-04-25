@@ -26,14 +26,14 @@
     foreach ($data as $key => $val){
         echo
             "<tr>"
-            . "<td>{$val['id_sunkvezimio_iranga']}</td>"
+            . "<td>{$val['id']}</td>"
             . "<td>{$val['pavadinimas']}</td>"
             . "<td>{$val['salis']}</td>"
             . "<td>{$val['pinigu_kiekis']}</td>"
             . "<td>{$val['fk_sunkvezimio_numeriai']}</td>"
             . "<td>"
-            . "<a href='#' onclick='showConfirmDialog(\"{$module}\", \"{$val['id_sunkvezimio_iranga']}\"); return false;' title=''>šalinti</a>&nbsp;"
-            . "<a href='index.php?module={$module}&action=edit&id={$val['id_sunkvezimio_iranga']}' title=''>redaguoti</a>"
+            . "<a href='#' onclick='showConfirmDialog(\"{$module}\", \"{$val['id']}\"); return false;' title=''>šalinti</a>&nbsp;"
+            . "<a href='index.php?module={$module}&action=edit&id={$val['id']}' title=''>redaguoti</a>"
             . "</td>"
             . "</tr>";
     }

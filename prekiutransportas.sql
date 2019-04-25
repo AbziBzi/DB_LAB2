@@ -476,7 +476,7 @@ CREATE TABLE `sunkvezimio_iranga` (
 -- Dumping data for table `sunkvezimio_iranga`
 --
 
-INSERT INTO `sunkvezimio_iranga` (`pavadinimas`, `salis`, `pinigu_kiekis`, `id_sunkvezimio_iranga`, `fk_sunkvezimio_numeriai`) VALUES
+INSERT INTO `sunkvezimio_iranga` (`pavadinimas`, `salis`, `pinigu_kiekis`, id, `fk_sunkvezimio_numeriai`) VALUES
 ('Myto', 'Slovakija', 87.2, 1, 'EHN 626'),
 ('Tol Collect', 'Voketija', 65.2, 2, 'FLN 362'),
 ('Satellic', 'Belgija', 133.6, 3, 'DKS 515'),
@@ -757,7 +757,7 @@ ALTER TABLE `sunkvezimiai`
 -- Indexes for table `sunkvezimio_iranga`
 --
 ALTER TABLE `sunkvezimio_iranga`
-  ADD PRIMARY KEY (`id_sunkvezimio_iranga`),
+  ADD PRIMARY KEY (id),
   ADD KEY `fk_sunkvezimio_numeriai` (`fk_sunkvezimio_numeriai`);
 
 --
