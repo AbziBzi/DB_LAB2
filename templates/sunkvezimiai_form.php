@@ -1,7 +1,7 @@
 <ul id="pagePath">
     <li><a href="index.php">Pradžia</a></li>
-    <li><a href="index.php?module=<?php echo $module; ?>&action=list">Darbuotojai</a></li>
-    <li><?php if(!empty($id)) echo "Darbuotojo redagavimas"; else echo "Naujas darbuotojas"; ?></li>
+    <li><a href="index.php?module=<?php echo $module; ?>&action=list">Sunkvežimiai</a></li>
+    <li><?php if(!empty($id)) echo "Sunkvežimio redagavimas"; else echo "Naujas sunkvežimis"; ?></li>
 </ul>
 <div class="float-clear"></div>
 <div id="formContainer">

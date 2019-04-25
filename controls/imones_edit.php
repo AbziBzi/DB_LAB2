@@ -8,7 +8,7 @@ $data = array();
 
 $required = array('pavadinimas', 'kontakto_vardas', 'kontakto_pavarde', 'imones_kodas');
 
-$maxLength = array(
+$maxLengths = array(
     'imones_kodas' => 9
 );
 
@@ -16,14 +16,13 @@ if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'pavadinimas' => 'alfnum',
+        'pavadinimas' => 'alfanum',
         'kontakto_vardas' => 'alfanum',
         'kontakto_pavarde' => 'alfanum',
-        'issimokejimas' => 'positivenumber',
         'imones_kodas' => 'positivenumber'
     );
 
-    $validator = new validator($validations, $required, $maxLength);
+    $validator = new validator($validations, $required, $maxLengths);
 
     if ($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
@@ -49,5 +48,6 @@ else {
 }
 
 $data['editing'] = 1;
+include 'templates/imones_form.php';
 
 ?>

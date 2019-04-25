@@ -8,7 +8,7 @@ $data = array();
 
 $required = array('pavadinimas', 'kontakto_vardas', 'kontakto_pavarde', 'imones_kodas');
 
-$maxLength = array(
+$maxLengths = array(
     'imones_kodas' => 9
 );
 
@@ -16,10 +16,9 @@ if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'pavadinimas' => 'alfnum',
+        'pavadinimas' => 'alfanum',
         'kontakto_vardas' => 'alfanum',
         'kontakto_pavarde' => 'alfanum',
-        'issimokejimas' => 'positivenumber',
         'imones_kodas' => 'positivenumber'
     );
 
@@ -27,6 +26,13 @@ if(!empty($_POST['submit'])) {
 
     if($validator->validate($_POST)) {
         $dataPrepared = $validator->preparePostFieldsForSQL();
+
+        if(isset($dataPrepared['issimokejimas']) && $dataPrepared['issimokejimas'] == 'on') {
+            $dataPrepared['issimokejimas'] = 1;
+        } else {
+            $dataPrepared['issimokejimas'] = 0;
+        }
+
         $imonesObj->insertImone($dataPrepared);
         header("Location: index.php?module={$module}&action=list");
         die();

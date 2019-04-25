@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aed83593-662d-48a5-95e0-02caa0c02fcc" name="Default Changelist" comment="Work with Truck done">
-      <change beforePath="$PROJECT_DIR$/controls/iranga_create.php" beforeDir="false" afterPath="$PROJECT_DIR$/controls/iranga_create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controls/iranga_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controls/iranga_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/iranga.php" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/iranga.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prekiutransportas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/prekiutransportas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/iranga_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/iranga_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/iranga_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/iranga_list.php" afterDir="false" />
+    <list default="true" id="aed83593-662d-48a5-95e0-02caa0c02fcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controls/imones_create.php" beforeDir="false" afterPath="$PROJECT_DIR$/controls/imones_create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls/imones_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controls/imones_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls/imones_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controls/imones_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/imones.php" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/imones.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/imones_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imones_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sunkvezimiai_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sunkvezimiai_form.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,43 +47,54 @@
         <item name="transportas" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="transportas: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="sunkvezimiai: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="transportas" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="transportas: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="sunkvezimio_iranga: table" type="dbc44a63:MariaImplModel$Table" />
+        <item name="imones: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/sunkvezimiai_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/iranga_form.php">
+        <entry file="file://$PROJECT_DIR$/templates/imones_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="255">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controls/iranga_create.php">
+        <entry file="file://$PROJECT_DIR$/controls/imones_create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="300">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controls/iranga_edit.php">
+        <entry file="file://$PROJECT_DIR$/controls/imones_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="510">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/imones.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="61" column="75" lean-forward="true" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -91,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libraries/iranga.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -103,6 +114,7 @@
     <findStrings>
       <find>klient</find>
       <find>action</find>
+      <find>hidden</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +137,7 @@
         <option value="$PROJECT_DIR$/controls/sunkvezimiai_list.php" />
         <option value="$PROJECT_DIR$/controls/vairuotojai_edit.php" />
         <option value="$PROJECT_DIR$/controls/imones_list.php" />
-        <option value="$PROJECT_DIR$/controls/imones_edit.php" />
-        <option value="$PROJECT_DIR$/controls/imones_create.php" />
         <option value="$PROJECT_DIR$/templates/imones_list.php" />
-        <option value="$PROJECT_DIR$/templates/imones_form.php" />
         <option value="$PROJECT_DIR$/controls/sutartys_create.php" />
         <option value="$PROJECT_DIR$/controls/sutartys_edit.php" />
         <option value="$PROJECT_DIR$/controls/sutartys_list.php" />
@@ -138,8 +147,6 @@
         <option value="$PROJECT_DIR$/controls/vairuotojai_delete.php" />
         <option value="$PROJECT_DIR$/controls/sutartys_delete.php" />
         <option value="$PROJECT_DIR$/controls/sunkvezimiai_delete.php" />
-        <option value="$PROJECT_DIR$/controls/imones_delete.php" />
-        <option value="$PROJECT_DIR$/libraries/imones.php" />
         <option value="$PROJECT_DIR$/libraries/sutartys.php" />
         <option value="$PROJECT_DIR$/libraries/vairuotojai.php" />
         <option value="$PROJECT_DIR$/templates/main.php" />
@@ -147,13 +154,18 @@
         <option value="$PROJECT_DIR$/libraries/sunkvezimiai.php" />
         <option value="$PROJECT_DIR$/controls/sunkvezimiai_create.php" />
         <option value="$PROJECT_DIR$/controls/sunkvezimiai_edit.php" />
-        <option value="$PROJECT_DIR$/templates/sunkvezimiai_form.php" />
         <option value="$PROJECT_DIR$/controls/iranga_delete.php" />
         <option value="$PROJECT_DIR$/templates/iranga_list.php" />
         <option value="$PROJECT_DIR$/libraries/iranga.php" />
         <option value="$PROJECT_DIR$/controls/iranga_edit.php" />
         <option value="$PROJECT_DIR$/controls/iranga_create.php" />
         <option value="$PROJECT_DIR$/templates/iranga_form.php" />
+        <option value="$PROJECT_DIR$/controls/imones_delete.php" />
+        <option value="$PROJECT_DIR$/templates/sunkvezimiai_form.php" />
+        <option value="$PROJECT_DIR$/controls/imones_create.php" />
+        <option value="$PROJECT_DIR$/controls/imones_edit.php" />
+        <option value="$PROJECT_DIR$/libraries/imones.php" />
+        <option value="$PROJECT_DIR$/templates/imones_form.php" />
       </list>
     </option>
   </component>
@@ -273,18 +285,26 @@
       <workItem from="1555580654485" duration="430000" />
       <workItem from="1555600968286" duration="18272000" />
       <workItem from="1556051770362" duration="6574000" />
-      <workItem from="1556116360268" duration="16318000" />
+      <workItem from="1556116360268" duration="23335000" />
     </task>
+    <task id="LOCAL-00001" summary="Work with Devices done">
+      <created>1556185462507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556185462507</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70830000" />
+    <option name="totallyTimeSpent" value="77847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06585501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16214721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -296,31 +316,51 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969433" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.20697288" />
+      <window_info anchor="right" id="Database" order="3" weight="0.20697288" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work with Truck done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work with Truck done" />
+    <MESSAGE value="Work with Devices done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work with Devices done" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://fda55fc9-e0cf-44a1-b80f-a0ae39d39e03/schema/transportas/table/sutartys">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script.sql" />
     <entry file="das://fda55fc9-e0cf-44a1-b80f-a0ae39d39e03/schema/transportas/table/vairuotojai">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -443,27 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controls/imones_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls/imones_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/imones_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="11" column="29" selection-end-line="77" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controls/iranga_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -499,24 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controls/imones_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/vairuotojai.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
           <caret line="75" column="50" lean-forward="true" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/imones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -538,13 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="58" column="28" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls/sunkvezimiai_delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -576,20 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controls/sunkvezimiai_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sunkvezimiai_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controls/iranga_delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -614,24 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/sunkvezimiai.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="56" selection-start-line="56" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/iranga.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controls/iranga_edit.php">
+    <entry file="file://$PROJECT_DIR$/templates/iranga_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -642,10 +612,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/iranga_form.php">
+    <entry file="file://$PROJECT_DIR$/controls/iranga_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="315">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="581" column="16" selection-start-line="581" selection-start-column="16" selection-end-line="581" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/sunkvezimiai_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/imones_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/iranga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/sunkvezimiai.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="57" selection-start-line="57" selection-end-line="64" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/sunkvezimiai_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/imones_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controls/imones_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/imones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="61" column="75" lean-forward="true" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sunkvezimiai_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/imones_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
