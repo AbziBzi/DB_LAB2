@@ -20,7 +20,7 @@ class sutartys {
     public function getSutarty($id) {
         $query = " SELECT *
                     FROM `{$this->sutartys_lentele}`
-                    WHERE `numeris`=`{$id}`";
+                    WHERE `numeris`='{$id}'";
         $data = mysql::select($query);
 
         return $data[0];
@@ -73,7 +73,7 @@ class sutartys {
                                     `kaina`,
                                     `referencinis_numeris`,
                                     `fk_imones_kodas`,
-                                    `fk_vairuotojo_asmens_kodas`,
+                                    `fk_vairuotojo_asmens_kodas`
                                 )
                                 VALUES
                                 (

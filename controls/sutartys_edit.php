@@ -1,6 +1,10 @@
 <?php
 
 include 'libraries/sutartys.php';
+include 'libraries/imones.php';
+include 'libraries/vairuotojai.php';
+$vairuotojoObj = new vairuotojai();
+$imonesObj = new imones();
 $sutartiesObj = new sutartys();
 
 $formErrors = null;
@@ -17,7 +21,7 @@ if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'numeris' => 'positivenumber',
+        'numeris' => 'anything',
         'kaina' => 'price',
         'fk_imones_kodas' => 'positivenumber',
         'fk_vairuotojo_asmens_kodas' => 'positivenumber'
@@ -25,7 +29,8 @@ if(!empty($_POST['submit'])) {
 
     $validator = new validator($validations, $required, $maxLengths);
 
-    if ($validator->validate($_POST)) {
+    if($validator->validate($_POST)) {
+
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
         $sutartiesObj->updateSutarty($dataPrepared);
@@ -41,7 +46,8 @@ if(!empty($_POST['submit'])) {
 else {
     $data = $sutartiesObj->getSutarty($id);
 }
-
 $data['editing'] = 1;
+
+include 'templates/sutartys_form.php';
 
 ?>
