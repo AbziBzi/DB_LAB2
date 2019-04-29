@@ -15,8 +15,8 @@ $maxLengths = array(
 if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
-    $validations = array (
-        'amsnems_kodas' => 'positivenumber',
+    $validations = array(
+        'asmens_kodas' => 'positivenumber',
         'vardas' => 'alfanum',
         'pavarde' => 'alfanum',
         'gimimo_data' => 'date',
@@ -28,22 +28,22 @@ if(!empty($_POST['submit'])) {
     $validator = new validator($validations, $required, $maxLengths);
 
     if ($validator->validate($_POST)) {
+
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
         $vairuotojoObj->updateVairuotoja($dataPrepared);
 
         header("Location: index.php?module={$module}&action=list");
         die();
-    }
-    else {
+    } else {
         $formErrors = $validator->getErrorHTML();
         $data = $_POST;
     }
-}
-else {
+} else {
     $data = $vairuotojoObj->getVairuotoja($id);
 }
 
 $data['editing'] = 1;
+include 'templates/vairuotojai_form.php';
 
 ?>

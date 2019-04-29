@@ -17,8 +17,8 @@ class vairuotojai {
 
     public function getVairuotoja($id) {
         $query = " SELECT *
-                    FROM `{$this->vairuotojai_lentele}`
-                    WHERE `asmens_kodas`=`{$id}`";
+                    FROM {$this->vairuotojai_lentele}
+                    WHERE `asmens_kodas`='{$id}'";
         $data = mysql::select($query);
 
         return $data[0];
@@ -48,6 +48,43 @@ class vairuotojai {
         return $data[0]['kiekis'];
     }
 
+    public function getSunkvezimioVairuotoja($vairuotojoId) {
+        $query = "  SELECT *
+					FROM `{$this->sunkvezimio_vairuotojai_lentele}`
+					WHERE `fk_vairuotojo_asmens_kodas`='{$vairuotojoId}'";
+        $data = mysql::select($query);
+
+        return $data;
+    }
+
+    public function insertSunkvezimioVairuotoja($data) {
+        if(isset($data['numeriai']) && sizeof($data['numeriai']) > 0) {
+            foreach($data['numeriai'] as $key=>$val) {
+                if($data['neaktyvus'] == array() || $data['neaktyvus'][$key] == 0) {
+                    $query = "  INSERT INTO `{$this->sunkvezimio_vairuotojai_lentele}`
+											(
+												`fk_vairuotojo_asmens_kodas`,
+												`nuo_data`,
+												`fk_sunkvezimio_numeriai`
+											)
+											VALUES
+											(
+												'{$data['asmens_kodas']}',
+												'{$data['datos'][$key]}',
+												'{$val}'
+											)";
+                    mysql::query($query);
+                }
+            }
+        }
+    }
+
+    public function deleteSunkvezimioVairuotoja($id, $clause = ""){
+        $query = "  DELETE FROM `{$this->sunkvezimio_vairuotojai_lentele}`
+					WHERE `fk_vairuotojo_asmens_kodas`='{$id}'" . $clause;
+        mysql::query($query);
+    }
+
     public function deleteVairuotoja($id) {
         $query = "    DELETE FROM `{$this->vairuotojai_lentele}` 
                       WHERE asmens_kodas = '{$id}'";
@@ -55,19 +92,19 @@ class vairuotojai {
     }
 
     public function updateVairuotoja($data) {
-        $query = " UPDATE `{$this->vairuotojai_lentele}`
-                    SET `vardas`={$data['vardas']},
-                        `pavarde`={$data['pavarde']},
-                        `teisiu_pabaigos_data`={$data['teisiu_pabaigos_data']},
-                        `gimimo_data`={$data['gimimo_data']},
-                        `sutarties_data`={$data['sutarties_data']},
-                        `telefono_numeris`={$data['telefono_numeris']}
-                    WHERE `asmens_kodas`={$data['asmens_kodas']}";
+        $query = " UPDATE {$this->vairuotojai_lentele}
+                    SET `vardas`='{$data['vardas']}',
+                        `pavarde`='{$data['pavarde']}',
+                        `teisiu_pabaigos_data`='{$data['teisiu_pabaigos_data']}',
+                        `gimimo_data`='{$data['gimimo_data']}',
+                        `sutarties_data`='{$data['sutarties_data']}',
+                        `telefono_numeris`='{$data['telefono_numeris']}'
+                    WHERE `asmens_kodas`='{$data['asmens_kodas']}'";
         mysql::query($query);
     }
 
     public function insertVairuotoja($data) {
-        $query = " INSERT INTO `{$this->vairuotojai_lentele}`
+        $query = " INSERT INTO {$this->vairuotojai_lentele}
                                 (
                                     `vardas`,
                                     `pavarde`,
@@ -82,11 +119,14 @@ class vairuotojai {
                                     '{$data['vardas']}',
                                     '{$data['pavarde']}',
                                     '{$data['asmens_kodas']}',
-                                    '{$data['tesius_pabaigos_data']}',
+                                    '{$data['teisiu_pabaigos_data']}',
                                     '{$data['gimimo_data']}',
                                     '{$data['sutarties_data']}',
                                     '{$data['telefono_numeris']}'
                                 )";
         mysql::query($query);
+
+        return mysql::getLastInsertedId();
+
     }
 }

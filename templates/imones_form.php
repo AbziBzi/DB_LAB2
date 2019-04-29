@@ -17,7 +17,7 @@
         <fieldset>
             <legend>Įmonės informacija</legend>
             <p>
-                <label class="field" for="imones_kodas">Valstybinis numeris<?php echo in_array('imones_kodas', $required) ? '<span> *</span>' : ''; ?></label>
+                <label class="field" for="imones_kodas">Įmonės kodas<?php echo in_array('imones_kodas', $required) ? '<span> *</span>' : ''; ?></label>
                 <?php if(!isset($data['editing'])) { ?>
                     <input type="text" id="imones_kodas" name="imones_kodas" class="textbox textbox-150" value="<?php echo isset($data['imones_kodas']) ? $data['imones_kodas'] : ''; ?>" />
                     <?php if(key_exists('imones_kodas', $maxLengths)) echo "<span class='max-len'>(iki {$maxLengths['imones_kodas']} simb.)</span>"; ?>

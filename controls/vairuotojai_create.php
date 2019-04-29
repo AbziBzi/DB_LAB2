@@ -16,7 +16,7 @@ if(!empty($_POST['submit'])) {
     include 'utils/validator.class.php';
 
     $validations = array (
-        'amsnems_kodas' => 'positivenumber',
+        'asmens_kodas' => 'positivenumber',
         'vardas' => 'alfanum',
         'pavarde' => 'alfanum',
         'gimimo_data' => 'date',
@@ -28,15 +28,20 @@ if(!empty($_POST['submit'])) {
     $validator = new validator($validations, $required, $maxLengths);
 
     if($validator->validate($_POST)) {
+
         $dataPrepared = $validator->preparePostFieldsForSQL();
+
         $vairuotojoObj->insertVairuotoja($dataPrepared);
+
         header("Location: index.php?module={$module}&action=list");
         die();
-    }
-    else {
+    } else {
+        // gauname klaidų pranešimą
         $formErrors = $validator->getErrorHTML();
+        // gauname įvestus laukus
         $data = $_POST;
     }
 }
 
 include 'templates/vairuotojai_form.php';
+?>
