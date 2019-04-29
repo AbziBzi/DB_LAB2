@@ -1,6 +1,6 @@
 <ul id="pagePath">
     <li><a href="index.php">Pradžia</a></li>
-    <li><a href="index.php?module=<?php echo $module; ?>&action=list">Papildomos paslaugos</a></li>
+    <li><a href="index.php?module=<?php echo $module; ?>&action=list">Vairuotojai</a></li>
     <li><?php if(!empty($id)) echo "Paslaugos redagavimas"; else echo "Nauja paslauga"; ?></li>
 </ul>
 <div class="float-clear"></div>
@@ -15,7 +15,7 @@
     <?php } ?>
     <form action="" method="post">
         <fieldset>
-            <legend>Papildomos paslaugos informacija</legend>
+            <legend>Vairuotojo informacija</legend>
             <p>
                 <label class="field" for="asmens_kodas">Asmėns kodas<?php echo in_array('asmens_kodas', $required) ? '<span> *</span>' : ''; ?></label>
                 <?php if(!isset($data['editing'])) { ?>

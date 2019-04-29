@@ -3,13 +3,13 @@
     <li>Sutartys</li>
 </ul>
 <div id="actions">
-    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja Sutartis</a>
+    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja sutartis</a>
 </div>
 <div class="float-clear"></div>
 
 <?php if(isset($_GET['remove_error'])) { ?>
     <div class="errorBox">
-        Vairuotojas nebuvo pašalintas, nes turi užsakymą (-ų).
+        Sutartis nebuvo pašalinta.
     </div>
 <?php } ?>
 
@@ -18,7 +18,7 @@
         <th>Numeris</th>
         <th>Kaina</th>
         <th>Referencinis nr.</th>
-        <th>Imones kodas</th>
+        <th>Įmonės kodas</th>
         <th>Vairuotojas</th>
         <th></th>
     </tr>

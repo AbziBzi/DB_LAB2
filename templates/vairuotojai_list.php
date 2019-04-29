@@ -9,7 +9,7 @@
 
 <?php if(isset($_GET['remove_error'])) { ?>
     <div class="errorBox">
-        Vairuotojas nebuvo pašalintas, nes turi užsakymą (-ų).
+        Vairuotojas nebuvo pašalintas, nes vairuoja sunkvežimį.
     </div>
 <?php } ?>
 

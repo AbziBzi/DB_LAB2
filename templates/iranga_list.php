@@ -1,15 +1,15 @@
 <ul id="pagePath">
     <li><a href="index.php">Pradžia</a></li>
-    <li>Sunkvezimiu Iranga</li>
+    <li>Sunkvežimių Įranga</li>
 </ul>
 <div id="actions">
-    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja Iranga</a>
+    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja įranga</a>
 </div>
 <div class="float-clear"></div>
 
 <?php if(isset($_GET['remove_error'])) { ?>
     <div class="errorBox">
-        Imones nebuvo pašalintas, nes turi užsakymą (-ų).
+        Įranga nebuvo pašalinta, nes yra naudojama.
     </div>
 <?php } ?>
 
@@ -17,9 +17,9 @@
     <tr>
         <th>ID</th>
         <th>Pavadinimas</th>
-        <th>Salis</th>
-        <th>Pinigu Kiekis</th>
-        <th>Sunkvezimio nr.</th>
+        <th>Šalis</th>
+        <th>Pinigų kiekis</th>
+        <th>Sunkvežimio nr.</th>
         <th></th>
     </tr>
     <?php

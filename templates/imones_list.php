@@ -1,25 +1,25 @@
 <ul id="pagePath">
     <li><a href="index.php">Pradžia</a></li>
-    <li>Imones</li>
+    <li>Imonės</li>
 </ul>
 <div id="actions">
-    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja Imone</a>
+    <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja Imonė</a>
 </div>
 <div class="float-clear"></div>
 
 <?php if(isset($_GET['remove_error'])) { ?>
     <div class="errorBox">
-        Imones nebuvo pašalintas, nes turi užsakymą (-ų).
+        Įmonė nebuvo pašalinta, nes turi užsakymą (-ų).
     </div>
 <?php } ?>
 
 <table class="listTable">
     <tr>
-        <th>Imones Kodas</th>
+        <th>Įmonės kodas</th>
         <th>Pavadinimas</th>
-        <th>Kontakto Vardas</th>
-        <th>Kontakto Pavarde</th>
-        <th>Issimokejimas</th>
+        <th>Kontakto vardas</th>
+        <th>Kontakto pavardė</th>
+        <th>Išsimokėjimas</th>
         <th></th>
     </tr>
     <?php

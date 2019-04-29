@@ -34,12 +34,18 @@ if(!empty($_POST['submit'])) {
         // suformuojame laukų reikšmių masyvą SQL užklausai
         $dataPrepared = $validator->preparePostFieldsForSQL();
 
-        // įrašome naują įrašą
-        $sunkvezimioObj->insertSunvezimi($dataPrepared);
+        if(($dataPrepared['pagaminimo_data']) < ($dataPrepared['registravimo_data']) || $dataPrepared['registravimo_data'] == null)
+        {
 
-        // nukreipiame į markių puslapį
-        header("Location: index.php?module={$module}&action=list");
-        die();
+            $sunkvezimioObj->insertSunvezimi($dataPrepared);
+            header("Location: index.php?module={$module}&action=list");
+            die();
+        } else{
+            // gauname klaidų pranešimą
+            $formErrors = "Pagaminimo data; Registravimo data";
+            // gauname įvestus laukus
+            $data = $_POST;
+        }
     } else {
         // gauname klaidų pranešimą
         $formErrors = $validator->getErrorHTML();

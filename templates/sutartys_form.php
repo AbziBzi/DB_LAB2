@@ -19,7 +19,7 @@
             <p>
                 <label class="field" for="imone">Įmonė<?php echo in_array('fk_imones_kodas', $required) ? '<span> *</span>' : ''; ?></label>
                 <select id="imone" name="fk_imones_kodas">
-                    <option value="-1">Pasirinkite įmone</option>
+                    <option value="-1">Pasirinkite įmonę</option>
                     <?php
                     $imones = $imonesObj->getImoniuSarasa();
                     foreach($imones as $key => $val) {
@@ -33,9 +33,9 @@
                 </select>
             </p>
             <p>
-                <label class="field" for="vairuotojas">Įmonė<?php echo in_array('fk_vairuotojo_asmens_kodas', $required) ? '<span> *</span>' : ''; ?></label>
+                <label class="field" for="vairuotojas">Vairuotojas<?php echo in_array('fk_vairuotojo_asmens_kodas', $required) ? '<span> *</span>' : ''; ?></label>
                 <select id="imone" name="fk_vairuotojo_asmens_kodas">
-                    <option value="-1">Pasirinkite Vairuotoją</option>
+                    <option value="-1">Pasirinkite vairuotoją</option>
                     <?php
                     $vairuotojai = $vairuotojoObj->getVairuotojoSarasa();
                     foreach($vairuotojai as $key => $val) {
