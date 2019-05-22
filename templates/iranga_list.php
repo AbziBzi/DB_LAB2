@@ -3,6 +3,7 @@
     <li>Sunkvežimių Įranga</li>
 </ul>
 <div id="actions">
+    <a href='index.php?module=<?php echo $module; ?>&action=report' target="_blank">Įrangos ataskaita</a>
     <a href='index.php?module=<?php echo $module; ?>&action=create'>Nauja įranga</a>
 </div>
 <div class="float-clear"></div>
